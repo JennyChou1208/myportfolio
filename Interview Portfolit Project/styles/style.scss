@@ -1,0 +1,284 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.orange {
+  position: absolute;
+  top: -10vh;
+  right: 0;
+  z-index: -1;
+  width: 50vw;
+  height: 150vh;
+}
+
+header {
+  nav {
+    width: 100%;
+    ul {
+      padding: 2rem;
+      width: 70%;
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      li {
+        font-size: 2.5rem;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+
+  section.left {
+    flex: 3 1 500px;
+    padding: 2rem;
+
+    h1 {
+      font-size: 4rem;
+      color: #e08958;
+    }
+    p {
+      font-size: 1.5rem;
+      padding: 1rem 0rem;
+    }
+  }
+
+  section.right {
+    flex: 1 1 600px;
+    position: relative;
+    img {
+      border-radius: 50%;
+      width: 30vw;
+      height: 30vw;
+      position: absolute;
+      top: 49vh;
+      right: 10vw;
+      transform: translatey(-50%);
+    }
+  }
+  section.table {
+    flex: 3 1 500px;
+    padding: 2rem;
+    font-size: 1.05rem;
+    table {
+      border-collapse: collapse;
+      tr {
+        border-bottom: 2px solid gray;
+        transition: all 0.2s ease;
+        td {
+          padding: 1rem;
+        }
+        &:hover{
+          background-color: #ffe4c4; 
+      }
+      }
+    }
+  }
+
+  section.picture {
+    flex: 1 1 600px;
+    position: relative;
+    img {
+      width: 30vw;
+    }
+    div.orangerect{
+      width: 30vw;
+      height: 87vh;
+      background-color: #deb887;
+      position: absolute;
+      top: 30px;
+      left: 80px;
+      z-index: -1;
+    }
+  }
+}
+
+section.form{
+  flex: 1 1 600px;
+  form{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.5rem;
+    div{
+      margin: 0.5rem;
+      label{
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+      input,textarea{
+        background-color: #e6c69d;
+        color: white;
+        font-size: 1.25rem;
+        padding: 0.5rem 0.25rem;
+        border: none;
+        width: 90%;
+      }
+      textarea{
+        vertical-align: top;
+      }
+      }
+      button{
+        align-self: center;
+        background-color: #deb887;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 0.75rem 1.5rem;
+        font-size: 2rem;
+        border-radius: 10px;
+      
+      }
+    }
+  }
+
+  div.line{
+    background-color: gray;
+    width: 3px;
+  }
+
+section.contact{
+  display: flex;
+  align-items: center;
+  flex: 1 1 500px;
+  padding: 2rem;
+  div.content{
+    h2{
+      margin: 1rem 0rem;
+    }
+  }
+}
+
+footer {
+  a {
+    padding: 1rem;
+  }
+}
+
+.active {
+  color: #e0e62f;
+}
+
+@media screen and (max-width: 1100px) {
+  .orange {
+    opacity: 0.5;
+  }
+  header {
+    nav {
+      ul {
+        width: 100%;
+        flex-direction: column;
+        li {
+          padding: 1rem 0rem;
+          border-bottom: 2px solid gray;
+        }
+      }
+    }
+  }
+  main {
+    section.right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      img {
+        position: static;
+        transform: none;
+        width: 50vw;
+        height: 50vw;
+      }
+    }
+    section.picture{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img{
+        width: 60vw;
+      }
+      div.orangerect{
+        display: none;
+      }
+    }
+  }
+}
+
+div.aa{
+  display: flex;
+  margin: 70px;
+}
+
+div.pros{
+  width: 10rem;
+  height: 5rem;
+  text-align: center;
+  margin-right: 3rem;
+}
+
+section div p{
+  font-size: 50px;
+  -webkit-text-stroke: 3px #3f3f4d;
+  text-transform: uppercase;
+  padding: 12px 48px;
+
+  color: transparent;
+  background-color: yellow;
+  box-shadow: -5px -5px 0px 2px cyan;
+
+  clip-path: polygon(
+    -10% -10%,
+    100% -10%,
+    100% 80%,
+    95% 100%,
+    15% 100%,
+    15% 92%,
+    5% 92%,
+    5% 100%,
+    0% 100%
+  );
+}
+
+section ul{
+  width: 69%;
+  display: block;
+  list-style-type: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 1.5rem;
+} li{
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+} a{
+  text-decoration: none;
+  color: black;
+  transition: all .3s linear;
+}
+
+section ul li a:hover{
+  color: #fff;
+  background-color: rgb(65, 63, 63);
+}
+
+body.i{
+  background-color: rgb(153, 148, 148);
+}
+
+
+
+
+
